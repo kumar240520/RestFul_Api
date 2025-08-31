@@ -1,0 +1,151 @@
+.post {
+    background-color: rgba(139, 241, 144, 0.789);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 500px;
+    text-align: center;
+ 
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px;
+    transition: transform  0.3s ease-out;
+   
+}
+
+.post:hover{
+    
+    transform: scale(1.03);
+}
+
+.username {
+    font-weight: bold;
+}
+
+.content {
+    color: #222;
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+    
+}
+
+.form{
+    text-align: center;
+    background-color: bisque;
+    width: 400px;
+    height: 430px;
+    padding-top: 25px;
+    border: 2px solid black;
+    border-radius:7px;
+     border: 1px solid black;
+    box-shadow: 2px 2px 4px;
+    
+    
+}
+.input:hover{
+    
+    transform: scale(1.03);
+}
+.input{
+    font-size: 20px;
+    border:2px solid black;
+     border: 1px solid black;
+    box-shadow: 1px 1px 4px;
+    transition: transform  0.3s ease-out;
+}
+.textarea{
+    font-size: 20px;
+    border-radius: 3px;
+    border:1px solid black;
+    box-shadow: 1px 1px 4px;
+    transition: transform  0.3s ease-out;
+}
+.textarea:hover{
+    
+    transform: scale(1.03);
+}
+
+.Delete:hover{
+    
+    transform: scale(1.03);
+}
+
+.Delete{
+     transition: transform  0.3s ease-out;
+}
+
+
+.submit{
+    font-size: 20px;
+    margin-top: 20px;
+    border:2px solid black;
+    transition: transform  0.3s ease-out;
+}
+
+.submit:hover{
+    transform: scale(1.03);
+}
+
+
+.newpost{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+   display: flex;
+  justify-content: center;     
+  align-items: center;
+  transition: transform  0.3s ease-out;
+  font-size: 20px;
+  background-color: rgb(146, 181, 235);
+  
+    
+}
+
+.newpost:hover{
+    
+    transform: scale(1.03);
+}
+
+
+.newform{
+    display: flex;
+  justify-content: center;     
+  align-items: center;
+}
+
+.id{
+    display: none;
+}
+.i_d{
+    text-align: center;
+    color: aliceblue;
+}
+a{
+    text-decoration: none;
+}
+.heading{
+    text-align: center;
+    color: aliceblue;
+}
+
+.description{
+    height: 200px;
+    width: 240px;
+    margin-top: 15px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 4px;
+    transition: transform  0.3s ease-out;
+}
+.description:hover{
+    
+    transform: scale(1.05);
+}
+
+body{
+    background-image: url("https://img.freepik.com/free-vector/circles-background-dark-tones_60389-166.jpg?semt=ais_hybrid&w=740");
+    background-size: cover;
+
+} 

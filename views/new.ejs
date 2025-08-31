@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h2 style="text-align: center; color: aliceblue;">
+        Enter Your New Post 
+        <h4 class="i_d"><b>Post ID: <%=id%></b></h4>
+    </h2>
+    <div class="newform">
+    <form method="post" action="http://localhost:8080/posts/new" class="form">
+        <input value="<%= id %>"  name="id" class="id">
+        <input type="text" placeholder="enter your user name" name="username" class="input">
+        <br>
+        <br>
+        <br>
+        <textarea placeholder="enter your post" name="text" class="textarea"></textarea>
+        <textarea placeholder="write your description" name="description" class="description"></textarea>
+
+    <br>
+    <button type="submit" class="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>
