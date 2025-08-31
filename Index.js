@@ -97,10 +97,12 @@ app.patch("/:id", (req, res) => {
 app.delete("/:id", (req, res) => {
     
     let { id } = req.params;
-     posts = posts.filter((p) => p.id !== id);
 
-     if(!posts){
-        res.redirect("/");
+    try{posts = posts.filter((p) => p.id !== id);}
+     
+
+     catch{res.redirect("/");
+        
      }
    
      res.redirect("/");
