@@ -29,19 +29,22 @@ app.use(methodOverride("_method"));
 //this is common for all
 
 let posts=[
+
     {     
-        username:"Hitesh kumar",
+        id:uuidv4(),
+        username:"livanshu kushwah",
         text:"Success is not final, failure is not fatal; it is the courage to continue that counts."
     ,
     description: "This thought means that success and failure are temporary phases of life. Achieving success once does not mean the journey is over, and failing once does not mean everything is destroyed. What truly matters is the determination to keep moving forward despite ups and downs."
     },
-    {         
+    {        
+         id:uuidv4(),
         username:"Nirvesh Singh",
         text:"Time and tide wait for none.",
         description: "This saying highlights the importance of time. Just like the tide of the ocean does not wait for anyone, time also keeps moving forward. Once it is gone, it can never return. Therefore, one must value time and use it wisely."
     },
-    {        id:uuidv4(),
-        username:"livanshu kushwah",
+    {        
+        username:"Hitesh kumar",
         text:"A journey of a thousand miles begins with a single step.",
         description: "Big achievements always start with small actions. Even if a goal looks huge or impossible, the first small step is the beginning of progress. Consistency in these small steps eventually leads to success."
     }
@@ -95,6 +98,10 @@ app.delete("/:id", (req, res) => {
     
     let { id } = req.params;
      posts = posts.filter((p) => p.id !== id);
+
+     if(!posts){
+        res.redirect("/");
+     }
    
      res.redirect("/");
 });
