@@ -98,14 +98,12 @@ app.delete("/:id", (req, res) => {
     
     let { id } = req.params;
 
-    try{posts = posts.filter((p) => p.id !== id);}
-     
+    if(!id){res.redirect("/");}
 
-     catch{res.redirect("/");
-        
-     }
-   
-     res.redirect("/");
+    else{posts = posts.filter((p) => p.id !== id);
+     res.redirect("/");}
+
+    
 });
 
 //
