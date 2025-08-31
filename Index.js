@@ -88,7 +88,7 @@ app.patch("/:id", (req, res) => {
 });
 
 app.delete("/:id", (req, res) => {
-    let del=alert("Are you sure to delete");
+    
     let { id } = req.params;
      posts = posts.filter((p) => p.id !== id);
    
