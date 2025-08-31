@@ -43,7 +43,8 @@ let posts=[
         text:"Time and tide wait for none.",
         description: "This saying highlights the importance of time. Just like the tide of the ocean does not wait for anyone, time also keeps moving forward. Once it is gone, it can never return. Therefore, one must value time and use it wisely."
     },
-    {        id:"2405",
+    {       
+         id:"2405",
         username:"Hitesh kumar",
         text:"A journey of a thousand miles begins with a single step.",
         description: "Big achievements always start with small actions. Even if a goal looks huge or impossible, the first small step is the beginning of progress. Consistency in these small steps eventually leads to success."
@@ -104,6 +105,17 @@ app.delete("/:id", (req, res) => {
      res.redirect("/");}
 
     
+});
+
+app.get("*", (req, res, next) => {
+  console.log("Simulating restart...");
+
+  // Clear or reset any in-memory state
+  global.myState = {};  
+
+  // If you use DB, you could also re-seed demo data here
+
+  next();
 });
 
 //
