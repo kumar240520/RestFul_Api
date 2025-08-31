@@ -18,8 +18,8 @@
            <h3 class="username"> @<i><%=post.username %></i></h3>
             <h4 class="content"><%= post.text %></h4>
 
-            <a href="http://localhost:8080/<%=post.id %>">Details</a>&nbsp;&nbsp;
-             <a href="http://localhost:8080/edit/<%=post.id %>">Edit</a>
+            <a href="/<%=post.id %>">Details</a>&nbsp;&nbsp;
+             <a href="/<%=post.id %>">Edit</a>
 
              <form method="post" action="/<%=post.id %>?_method=DELETE">
                 <button type="submit" style="margin-top: 5px; color: rgb(247, 242, 242); background-color: rgb(239, 103, 103); " class="Delete">Delete</button>
@@ -28,7 +28,7 @@
         </div>
         <% } %>
 
-        <form method="get" action="http://localhost:8080/new">
+        <form method="get" action="/new">
         <button class="newpost"><b>Add a New Post</b></button>
         </form>
 </body>

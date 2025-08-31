@@ -1,7 +1,11 @@
 const express = require("express");
 const app=express();
 
-let port=8080;
+const port = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`server is running on port ${PORT}`);
+});
+
 
 app.set("view engine","ejs");
 
@@ -56,7 +60,7 @@ app.get("/new",(req,res)=>{
 app.post("/",(req,res)=>{
     let {username,text,id,description}=req.body;
     posts.push({username,text,id,description});
-    res.redirect("http://localhost:8080/");
+    res.redirect("/");
 })
 
 app.get("/:id", (req, res) => {
@@ -92,7 +96,7 @@ app.delete("/:id", (req, res) => {
     let { id } = req.params;
      posts = posts.filter((p) => p.id !== id);
    
-     res.redirect("http://localhost:8080/");
+     res.redirect("/");
 });
 
 //
