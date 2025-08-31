@@ -106,12 +106,6 @@ app.delete("/:id", (req, res) => {
 
     
 });
-
-app.get("*", (req, res, next) => {
-  console.log("Simulating restart...");
-});
-
-
 //
 
 
@@ -120,4 +114,5 @@ app.get("*", (req, res, next) => {
 //     let post_id = posts[id];   // use index directly
 //     if (!post_id) return res.send("Post not found");
 //     res.render("show.ejs", { post_id });
-// })
+// });
+
