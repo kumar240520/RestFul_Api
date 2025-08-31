@@ -19,7 +19,7 @@
             <h4 class="content"><%= post.text %></h4>
 
             <a href="/<%=post.id %>">Details</a>&nbsp;&nbsp;
-             <a href="/<%=post.id %>">Edit</a>
+             <a href="/edit/<%=post.id %>">Edit</a>
 
              <form method="post" action="/<%=post.id %>?_method=DELETE">
                 <button type="submit" style="margin-top: 5px; color: rgb(247, 242, 242); background-color: rgb(239, 103, 103); " class="Delete">Delete</button>
