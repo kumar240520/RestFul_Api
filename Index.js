@@ -44,22 +44,22 @@ let posts=[
 ]
 
 
-app.get("/posts",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("index.ejs",{posts});
 });
 
-app.get("/posts/new",(req,res)=>{
+app.get("/new",(req,res)=>{
     let id=uuidv4();
     res.render("new.ejs",{id});
 });
 
-app.post("/posts/new",(req,res)=>{
+app.post("/",(req,res)=>{
     let {username,text,id,description}=req.body;
     posts.push({username,text,id,description});
-    res.redirect("http://localhost:8080/posts");
+    res.redirect("http://localhost:8080/");
 })
 
-app.get("/posts/:id", (req, res) => {
+app.get("/:id", (req, res) => {
     let { id } = req.params;
     let post_id = posts.find((p) => id===p.id);
     if (!post_id) return res.send("Post not found");
@@ -67,7 +67,7 @@ app.get("/posts/:id", (req, res) => {
 });
 //npm install method-override
 // Show edit form
-app.get("/posts/edit/:id", (req, res) => {
+app.get("/edit/:id", (req, res) => {
     let { id } = req.params;
     let post_id = posts.find((p) => p.id === id);
     if (!post_id) return res.send("Post not found");
@@ -75,7 +75,7 @@ app.get("/posts/edit/:id", (req, res) => {
 });
 
 // Handle edit (PATCH)
-app.patch("/posts/:id", (req, res) => {
+app.patch("/:id", (req, res) => {
     let { id } = req.params;
     let { text } = req.body;
 
@@ -84,15 +84,15 @@ app.patch("/posts/:id", (req, res) => {
         post.text = text; // update content
     }
 
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
-app.delete("/posts/:id", (req, res) => {
+app.delete("/:id", (req, res) => {
     let del=alert("Are you sure to delete");
     let { id } = req.params;
      posts = posts.filter((p) => p.id !== id);
    
-     res.redirect("http://localhost:8080/posts");
+     res.redirect("http://localhost:8080/");
 });
 
 //
