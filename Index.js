@@ -29,13 +29,13 @@ app.use(methodOverride("_method"));
 //this is common for all
 
 let posts=[
-    {     id:"9eef7767-7b66-4ebb-b173-7eab46ee15d8",
+    {     
         username:"Hitesh kumar",
         text:"Success is not final, failure is not fatal; it is the courage to continue that counts."
     ,
     description: "This thought means that success and failure are temporary phases of life. Achieving success once does not mean the journey is over, and failing once does not mean everything is destroyed. What truly matters is the determination to keep moving forward despite ups and downs."
     },
-    {         id:"c4971f98-ba64-47a1-a452-d28464565f45",
+    {         
         username:"Nirvesh Singh",
         text:"Time and tide wait for none.",
         description: "This saying highlights the importance of time. Just like the tide of the ocean does not wait for anyone, time also keeps moving forward. Once it is gone, it can never return. Therefore, one must value time and use it wisely."
