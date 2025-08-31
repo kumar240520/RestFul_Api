@@ -57,7 +57,7 @@ app.get("/new",(req,res)=>{
     res.render("new.ejs",{id});
 });
 
-app.post("/",(req,res)=>{
+app.post("/new",(req,res)=>{
     let {username,text,id,description}=req.body;
     posts.push({username,text,id,description});
     res.redirect("/");
